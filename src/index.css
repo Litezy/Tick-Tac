@@ -162,7 +162,7 @@ body {
   width: 2rem;
   height: 2rem;
   border: none;
-  padding: .1rem auto;
+ padding-right: auto;
   background: orange;
   color:black;
   font-size: 1.3rem;
