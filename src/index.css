@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto+Slab:wght@400;700&display=swap');
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -6,4 +8,261 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: rgb(37, 19, 19);
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  background-size:cover;
+  /* filter: blur(1px); */
+  /* -webkit-filter: blur(1px); */
+}
+
+  
+
+.main{
+  width: 80%;
+  height: fit-content;
+  background-color: rgb(90, 10, 10);
+  backdrop-filter: transparent;
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid red;
+  box-shadow: 0 0 0 0.5 #3d8c07;
+}
+.heading h2 {
+  color: #f7de01;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin-top: 2rem;
+  font-family: Caprasimo;
+
+}
+.head {
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.symbol {
+  color: white;
+  font-size: 1rem;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 2rem auto;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  gap: 4rem;
+  padding-left: 0;
+}
+.game-ol{
+  list-style: none;
+}
+.game-board{
+  list-style: none;
+}
+
+.player {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  list-style: none;
+}
+
+#list-players {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  height: 3rem;
+  margin: 0 auto;
+  margin-top: -2.5rem;
+  list-style: none;
+  background-color: rgb(48, 44, 44);
+}
+#list-players.active{
+  border: 1px solid orange;
+  animation: animate 1.8s infinite ease-in-out;
+}
+#list-players>span{
+  width: 70%;
+}
+#list-players>button{
+  width: 30%;
+}
+
+.player input {
+  padding: 1rem;
+  color: yellow;
+  background-color: transparent;
+  font-size: 1.4rem;
+  outline: none;
+  width: 50%;
+  border: none;
+}
+
+.btn {
+  margin-right: 1rem;
+  background: transparent;
+  color: yellow;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  
+}
+.newPlayer{
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  margin-right: 3rem;
+  color: yellow;
+  /* text-transform: uppercase; */
+}
+.game-board{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem 0;
+  padding: 0;
+  flex-direction: column;
+ 
+}
+.game-board ol {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.game-board button {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: orange;
+  color:black;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: 'Caprasimo', cursive;
+}
+.game-over{
+  width: 90%;
+  height: 70%;
+  top: 0;
+  right: 10%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* padding: 5rem 2rem 0; */
+  font-family: 'Caprasimo', cursive;
+  position: absolute;
+  background-color: darkorange;
+  animation: gameover 0.8s ease-in-out;
+}
+.game-over h1{
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.game-over p{
+  font-size: 1.5rem;
+  color: white;
+  text-transform: capitalize;
+}
+.game-over button{
+  width: 40%;
+  height: 3rem;
+  font-size: 1.2rem;
+  font-family: cursive;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.logs{
+  color: white;
+  font-size: 1.5rem;
+  width: 100%;
+  border-radius: 4px;
+  text-align: center;
+  margin: -2.3rem auto 0;
+  background-color: rgb(90, 10, 10);
+}
+.log-hd{
+  list-style: none;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+.logbody{
+  font-size: 1rem;
+  color: orange;
+  animation: logs 0.6s ease-in-out;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes animate {
+  0% {
+    border-color: #f6865a;
+    box-shadow: 0 0 0 0 rgba(246, 227, 90, 0.4);
+  }
+  50% {
+    border-color: #25eb3f;
+    box-shadow: 0 0 0 0.9rem rgba(248, 165, 49, 0);
+  }
+  100% {
+    border-color: rgb(150, 58, 58);
+    box-shadow: 0 0 0 0 rgba(246, 227, 90, 0);
+  }
+}
+@keyframes gameover {
+  0%{
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50%{
+    transform: scale(1.1);
+    opacity: 1;
+  }
+ 
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+@keyframes logs {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
