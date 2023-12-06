@@ -98,6 +98,9 @@ const App = () => {
           <h3 className=''>Game Logs</h3>
           <Logs turns={gameTurns}/>
         </div>
+        <footer>
+          built by Litezy
+        </footer>
     </div>
   )
 }

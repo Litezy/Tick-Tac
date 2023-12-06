@@ -226,6 +226,12 @@ body {
   animation: logs 0.6s ease-in-out;
   margin-bottom: 1.5rem;
 }
+footer{
+  color: orange;
+  font-size: .9rem;
+  text-transform: capitalize;
+  font-family: 'Caprasimo', cursive;
+}
 
 @keyframes animate {
   0% {
