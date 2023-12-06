@@ -34,7 +34,7 @@ body {
   padding: 1rem;
   margin: 0 auto;
   border-radius: 10px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   box-shadow: 0 0 0 0.5 #3d8c07;
 }
 .heading h2 {
@@ -66,13 +66,15 @@ body {
 .list {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   margin: 2rem auto;
   align-items: center;
   justify-content: space-between;
   list-style: none;
   gap: 4rem;
-  padding-left: 0;
+  
+  /* padding-right: 4rem; */
+  /* padding-right: auto; */
 }
 .game-ol{
   list-style: none;
@@ -88,17 +90,20 @@ body {
   justify-content: space-between;
   background-color: transparent;
   list-style: none;
+  margin: 0 auto;
 }
 
 #list-players {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
   height: 3rem;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   margin-top: -2.5rem;
+  margin-left: 0rem;
+  margin-right: 5rem;
   list-style: none;
   background-color: rgb(48, 44, 44);
 }
@@ -119,7 +124,7 @@ body {
   background-color: transparent;
   font-size: 1.4rem;
   outline: none;
-  width: 50%;
+  width: 80%;
   border: none;
 }
 
@@ -135,19 +140,17 @@ body {
 .newPlayer{
   padding: 0 1rem;
   font-size: 1.2rem;
-  margin-right: 3rem;
   color: yellow;
-  /* text-transform: uppercase; */
 }
 .game-board{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  width: 90%;
   margin: 4rem 0;
   padding: 0;
   flex-direction: column;
- 
 }
 .game-board ol {
   display: flex;
@@ -162,7 +165,6 @@ body {
   width: 2rem;
   height: 2rem;
   border: none;
- padding-right: auto;
   background: orange;
   color:black;
   font-size: 1.3rem;
@@ -178,7 +180,6 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* padding: 5rem 2rem 0; */
   font-family: 'Caprasimo', cursive;
   position: absolute;
   background-color: darkorange;
@@ -265,5 +266,37 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .head{
+    width: 80%;
+  }
+  .main{
+    width: 70%;
+  }
+  .game-board button {
+    width: 5rem;
+    height: 5rem;
+  }
+  .heading h2{
+    font-size: 2rem;
+  }
+  .list{
+    flex-direction: row;
+    width: 100%;
+  }
+  #list-players {
+    width: 100%;
+  }
+  .game-board button{
+    font-size: 4rem;
+  }
+  .game-over{
+  right: 6.5%;
+  }
+  .logs{
+    width: 75%;
   }
 }
